@@ -41,4 +41,9 @@ public class AlunoController {
     public Boolean editAluno (@RequestBody Aluno aluno) {
         return alunoService.alterarAluno(aluno);
     }
+
+    @GetMapping("/obterMedia/{nome}")
+    public String obterMedia(@PathVariable String nome) {
+        return alunoService.diploma(nome);
+    }
 }
