@@ -48,6 +48,13 @@ public class AlunoService {
     }
 
     public Boolean alterarAluno(Aluno aluno) {
+      for (int i = 0; i < alunos.size(); i++) {
+          Aluno aluno1 = alunos.get(i);
+          if (aluno1.getNome().equals(aluno.getNome())) {
+            alunos.set(i, aluno);
+            return true;
+          }
+      }
         return false;
 
     }
